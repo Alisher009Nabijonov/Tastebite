@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tastebite</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&family=Roboto:wght@100;400;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-storage.js"></script>
+</head>
+
+<body>
+    <!-- navbar page -->
+    <div class="navbar">
+        <img src="./logo.png" alt="" class="logo_img">
+        <ul>
+            <li>
+                <a href="#">Homepage<i class="fa-solid fa-chevron-down"></i></a>
+                <ul class="dropdovn">
+                    <a href="#" data-switcher data-tab="1">Homepage1</a>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Recipe Page <i class="fa-solid fa-chevron-down"></i></a>
+                <ul class="dropdovn">
+                    <a href="#" data-switcher data-tab="16">About1</a>
+
+                    <a href="#" data-switcher data-tab="14">Favarites</a>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Pages <i class="fa-solid fa-chevron-down"></i></a>
+                <ul class="dropdovn">
+                    <li> <a href="#" data-switcher data-tab="10">Catigories1</a></li>
+                    <a href="#" data-switcher data-tab="11">Catigories2</a>
+                    <a href="#" data-switcher data-tab="7">Search1</a>
+                    <a href="#" data-switcher data-tab="12">Blog1</a>
+                    <a href="#" data-switcher data-tab="13">Blog2</a>
+                    <a href="#" data-switcher data-tab="15">Profil</a>
+
+                </ul>
+            </li>
+            <li><a href="#" data-switcher data-tab="17">Buy</a></li>
+        </ul>
+        <div class="navbar-btns">
+            <i class="fa-solid fa-magnifying-glass" id="search"></i>
+            <button data-switcher data-tab="5">Login</button>
+            <button data-switcher data-tab="6">Sign up</button>
+            <i class="fa-solid fa-bars-staggered" id="bars"></i>
+            <i class="fa-solid fa-x" id="yoq"></i>
+        </div>
+
+        <!-- menu -->
+        <div class="menu">
+            <div class="menu_main">
+                <li><a href="#" class="alohida">Homepage <i class="fa-solid fa-chevron-down"></i></a></li>
+                <li><a href="#" data-switcher data-tab="1">Home1</a></li>
+                <li><a href="#" class="alohida">Recipe Page <i class="fa-solid fa-chevron-down"></i></a></li>
+                <li><a href="#" data-switcher data-tab="16">About1</a></li>
+                <li><a href="#" data-switcher data-tab="14">Favarites</a></li>
+                <li><a href="#" class="alohida">Pages <i class="fa-solid fa-chevron-down"></i></a></li>
+                <li> <a href="#" data-switcher data-tab="10">Catigories1</a></li>
+                <li><a href="#" data-switcher data-tab="11">Catigories2</a></li>
+                <li> <a href="#" data-switcher data-tab="7">Search1</a></li>
+                <li><a href="#" data-switcher data-tab="12">Blog1</a></li>
+                <li><a href="#" data-switcher data-tab="13">Blog2</a></li>
+                <li><a href="#" data-switcher data-tab="15">Profil</a></li>
+            </div>
+
+            <div class="menu_btn">
+                <button data-switcher data-tab="5">Login</button>
+                <button data-switcher data-tab="6">Sign up</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sid_search">
+        <i class="fa-solid fa-x" id="search_close"></i>
+        <h1 class="sid_search_h1">Search</h1>
+        <input type="search" id="search_side" placeholder="search...">
+    </div>
+    <!-- navbar page end -->
+
+    <!-- main -->
+
+    <div class="main">
+        <!-- home page  -->
+        <div class="k page activepage" data-page="1">
+            <div class="home">
+                <div class="mighty_left">
+                    <img src="./1.png" alt="" class="mighty_img">
+                    <img src="./2.png" alt="" class="response_img">
+                </div>
+                <div class="mighty_right">
+                    <p class="mighty_p"><img src="./Vector.svg" alt="">85% would make this again</p>
+                    <h1 class="mighty_h1">Mighty Super Cheesecake</h1>
+                    <P class="mighty_p1">Look no further for a creamy and ultra smooth classic cheesecake recipe! No one
+                        can deny its simple decadence.</P>
+                </div>
+
+            </div>
+            <h1 class="super_h1">Super Delicious</h1>
+            <div class="super">
+                <div class="super_object">
+
+                </div>
+            </div>
+            <h1 class="sweet_h1">Sweet Tooth</h1>
+            <div class="sweet">
+
+                <div class="sweet_object">
+
+                </div>
+            </div>
+
+            <div class="popular">
+                <h1 class="popular_h1">Popular Categories</h1>
+                <div class="popular_object">
+
+                </div>
+            </div>
+
+
+            <div class="Deliciousness">
+                <div class="Deliciousness_main">
+                    <h1 class="Deliciousness_h1">Deliciousness to your inbox</h1>
+                    <p class="Deliciousness_p">Enjoy weekly hand picked recipes and recommendations</p>
+                    <form>
+                        <input type="text" placeholder="Email adress " class="Deliciousness_input" id="submit">
+                        <button class="Deliciousness_btn" onclick="xabarbot()" id="sendBtn">Join</button>
+                    </form class="Deliciousness_form">
+                    <p class="Deliciousness_p1">By joining our newsletter you agree to our Terms and Conditions</p>
+                </div>
+            </div>
+
+
+
+            <div class="hand_picked">
+                <h1 class="hand_picked_h1">Hand-Picked Collections</h1>
+                <div class="hand_picked_object">
+
+                </div>
+            </div>
+
+            <div class="latest_recipes">
+                <h1 class="latest_recipes_h1">Latest Recipes</h1>
+                <div class="latest_recipes_object">
+
+                </div>
+                <div class="favarites_btn1">
+                    <button class="favarites_btn">Load More</button>
+                </div>
+            </div>
+
+        </div>
+        <!-- home page end -->
+        <!-- search -->
+        <div class="search page" data-page="7">
+            <div class="search_main ">
+                <h1>Search results</h1>
+                <input type="search" class="searchin" placeholder="search...">
+                <div class="search_object">
+
+                </div>
+                <div class="favarites_btn1">
+                    <button class="favarites_btn11">Load More</button>
+                </div>
+            </div>
+        </div>
+        <!-- catigori -->
+        <div class="cotigories page" data-page="10">
+            <div class="catigoriy">
+                <h1 class="h1">Catigories</h1>
+                <hr>
+                <div class="catigory-objects">
+
+                </div>
+            </div>
+        </div>
+        <!-- caigori 2 -->
+        <div class="cotigories1 page" data-page="11">
+            <div class="catigoriy1">
+                <div class="catigoriy_top">
+                    <div class="catigoriy_img">
+                        <img src="./imge/Header Image.png" alt="" class="catigoriy_top_img">
+                    </div>
+                    <div class="catigoriy_text">
+                        <div class="text111">
+                            <h1 class="catigoriy_h1">Desserts <p>(98 Recipes)</p>
+                            </h1>
+                            <p class="catiogriy_p">One thing I learned living in the Canarsie section of Brooklyn, NY
+                                was
+                                how to cook a good Italian meal. Here is a recipe I created after having this dish in a
+                                restaurant. Enjoy!</p>
+                        </div>
+                        <div class="filters">
+                            <select id="catigoriy_sort">
+                                <option value="All">All</option>
+                                <option value="Keks">Keks</option>
+                                <option value="Chocolate">Chocolate</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="catigory_objects1">
+
+                </div>
+                <div class="favarites_btn1">
+                    <button class="favarites_btn2">Load More</button>
+                </div>
+            </div>
+        </div>
+        <!-- login page  -->
+        <div class="login page" data-page="5">
+            <div class="login-container">
+
+                <h2>LOGIN</h2>
+                <form id="loginForm">
+                    <div class="input1">
+                        <label for=""><i class="fa-solid fa-envelope"></i></label>
+                        <input type="email" id="loginEmail" placeholder="Email" required>
+                    </div>
+                    <div class="line"></div>
+                    <div class="input2">
+                        <label for=""><i class="fa-solid fa-lock"></i></label>
+                        <input type="password" id="loginPassword" placeholder="Password" required>
+                    </div>
+                    <div class="line"></div>
+                    <div class="forgot-password">
+                        <a class="forget_password" href="#" id="reset">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="login_btn">Login</button>
+                </form>
+                <p class="login_p">Or login with</p>
+                <div class="social-login">
+                    <button class="facebook_btn"><i class="fa-brands fa-facebook-f"></i>Facebook</button>
+                    <button id="signInButton" class="google_btn"><i class="fa-brands fa-google"></i>Google</button>
+                </div>
+                <div class="loginp">
+                    <p>Don't have an account? <a href="#" data-switcher data-tab="6">Sign up</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="signup page" data-page="6">
+            <div class="signup-form">
+                <h2>SIGN UP</h2>
+                <form id="signupForm">
+                    <div class="input-group">
+                        <label for=""><i class="fa-solid fa-user"></i></label>
+                        <input type="text" id="name" placeholder="Full Name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for=""><i class="fa-solid fa-envelope"></i></label>
+                        <input type="email" id="signupEmail" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for=""><i class="fa-solid fa-lock"></i></label>
+                        <input type="password" id="signupPassword" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="signup-btn">Sign up</button>
+                    <p>By creating an account, you agree to our <a href="#">Terms & Conditions</a> <a href="#"
+                            data-switcher data-tab="5">Login</a></p>
+                </form>
+            </div>
+        </div>
+        <!-- blog -->
+        <div class="blog_full page" data-page="12">
+            <div class="full">
+                <div class="full_left">
+                    <h1 class="full_h1">A full guide for a better and smarter cooking</h1>
+                    <div class="full_bottom">
+                        <div class="bottom_1">
+                            <img src="./imge/blog4.png" alt="">
+                            <p class="bottom_1p">Tricia Albert</p>
+                        </div>
+                        <div class="bottom_2">
+                            <i class="fa-regular fa-calendar"></i>
+                            <p class="bottom_2p">Yesterday</p>
+                        </div>
+                        <div class="bottom_3">
+                            <i class="fa-regular fa-envelope"></i>
+                            <p class="bottom_3p">25</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="full_right">
+                    <i class="fa-solid fa-share-from-square"></i>
+                    <i class="fa-solid fa-bookmark"></i>
+                </div>
+            </div>
+            <div class="full_one">
+                <hr class="one_hr">
+                <p class="one_p">One thing I learned living in the Canarsie section of Brooklyn, NY was how to cook a
+                    good Italian meal. Here is a recipe I created after having this dish in a restaurant. Enjoy!</p>
+                <img src="./imge/blog1.png" alt="" class="one_img">
+            </div>
+            <div class="before">
+                <h1 class="before_h1">Before you begin</h1>
+                <p class="before_p">Food qualities braise chicken cuts bowl through slices butternut snack. Tender meat
+                    juicy dinners. One-pot low heat plenty of time adobo fat raw soften fruit. sweet renders bone-in
+                    marrow richness kitchen, fricassee basted pork shoulder. Delicious butternut squash hunk Food
+                    qualities braise chicken cuts bowl through slices butternut snack. Tender meat juicy dinners.
+                    One-pot low heat plenty of time adobo fat raw soften fruit. sweet renders bone-in marrow richness
+                    kitchen, fricassee basted pork shoulder. Delicious butternut squash hunk.</p>
+            </div>
+            <div class="here">
+                <div class="here_left">
+                    <h1 class="here_h1">Here are the basics</h1>
+                    <p class="here_p">Juicy meatballs brisket slammin' baked shoulder. Juicy smoker soy sauce burgers
+                        brisket. polenta mustard hunk greens. Wine technique snack skewers chuck excess. Oil heat
+                        slowly.</p>
+                    <p class="here_p1">slices natural delicious, set aside magic tbsp skillet, bay leaves brown
+                        centerpiece. fruit soften edges frond slices onion snack pork steem on wines excess technique
+                        cup; Cover smoker soy sauce fruit snack. Sweet one-dozen scrape delicious, non sheet raw crunch
+                        mustard. Minutes clever slotted tongs scrape, brown steem undisturbed rice.</p>
+                </div>
+                <div class="here_right">
+                    <img src="./imge/blog2.png" alt="" class="here_img">
+                </div>
+            </div>
+            <div class="cannot">
+                <h1 class="cannot_h1">“One cannot think well, love well, sleep well, if one has not dined well.”</h1>
+                <p class="cannot_p">― Virginia Woolf, A Room of One's Own</p>
+                <hr class="cannot_hr">
+            </div>
+            <div class="kitchen">
+                <h1 class="kitchen_h1">In the kitchen</h1>
+                <p class="kitchen_p1">Gastronomy atmosphere set aside. Slice butternut cooking home. Delicious romantic
+                    undisturbed raw platter will meld. Thick Skewers skillet natural, smoker soy sauce wait roux. slices
+                    rosette bone-in simmer precision alongside baby leeks. Crafting renders aromatic enjoyment, then
+                    slices taco. Minutes undisturbed cuisine lunch magnificent mustard curry. Juicy share baking sheet
+                    pork. Meals ramen rarities selection, raw pastries richness magnificent atmosphere. Sweet soften
+                    dinners, cover mustard infused skillet, Skewers on culinary experience.</p>
+                <p class="kitchen_p2">Juicy meatballs brisket slammin' baked shoulder. Juicy smoker soy sauce burgers
+                    brisket. polenta mustard hunk greens. Wine technique snack skewers chuck excess. Oil heat slowly.
+                    slices natural delicious, set aside magic tbsp skillet, bay leaves brown centerpiece. fruit soften
+                    edges frond slices onion snack pork steem on wines excess technique cup; Cover smoker soy sauce
+                    fruit snack. Sweet one-dozen scrape delicious, non sheet raw crunch mustard. Minutes clever slotted
+                    tongs scrape, brown steem undisturbed rice.</p>
+                <p class="kitchen_p3">Food qualities braise chicken cuts bowl through slices butternut snack. Tender
+                    meat juicy dinners. One-pot low heat plenty of time adobo fat raw soften fruit. sweet renders
+                    bone-in marrow richness kitchen, fricassee basted pork shoulder. Delicious butternut squash hunk.
+                    Flavor centerpiece plate, delicious ribs bone-in meat, excess chef end. sweet effortlessly pork, low
+                    heat smoker soy sauce flavor meat, rice fruit fruit. Romantic fall-off-the-bone butternut chuck rice
+                    burgers.</p>
+                <img src="./imge/blog3.png" alt="" class="kitchen_img">
+                <p class="kitchen_p4">Gastronomy atmosphere set aside. Slice butternut cooking home. Delicious romantic
+                    undisturbed raw platter will meld. Thick Skewers skillet natural, smoker soy sauce wait roux. slices
+                    rosette bone-in simmer precision alongside baby leeks. Crafting renders aromatic enjoyment, then
+                    slices
+                    taco. Minutes undisturbed cuisine lunch magnificent mustard curry. Juicy share baking sheet pork.
+                    Meals
+                    ramen rarities selection, raw pastries richness magnificent atmosphere. Sweet soften dinners, cover
+                    mustard infused skillet, Skewers on culinary experience.</p>
+                <p class="kitchen_p5">Juicy meatballs brisket slammin' baked shoulder. Juicy smoker soy sauce burgers
+                    brisket. polenta mustard hunk greens. Wine technique snack skewers chuck excess. Oil heat slowly.
+                    slices
+                    natural delicious, set aside magic tbsp skillet, bay leaves brown centerpiece. fruit soften edges
+                    frond
+                    slices onion snack pork steem on wines excess technique cup; Cover smoker soy sauce fruit snack.
+                    Sweet
+                    one-dozen scrape delicious, non sheet raw crunch mustard. Minutes clever slotted tongs scrape, brown
+                    steem undisturbed rice.</p>
+                <p class="kitchen_p6">Juicy meatballs brisket slammin' baked shoulder. Juicy smoker soy sauce burgers
+                    brisket. polenta mustard hunk greens. Wine technique snack skewers chuck excess. Oil heat slowly.
+                    slices
+                    natural delicious, set aside magic tbsp skillet, bay leaves brown centerpiece. fruit soften
+                    edgesfrond
+                    slices onion snack pork steem on wines excess technique cup; Cover smoker soy sauce fruit snack.
+                    Sweet
+                    one-dozen scrape delicious, non sheet raw crunch mustard. Minutes clever slotted tongs scrape, brown
+                    steem undisturbed rice.</p>
+                <p class="kitchen_p7">Food qualities braise chicken cuts bowl through slices butternut snack. Tender
+                    meat
+                    juicy dinners. One-pot low heat plenty of time adobo fat raw soften fruit. sweet renders
+                    bone-inmarrow
+                    richness kitchen, fricassee basted pork shoulder. Delicious butternut squash hunk.
+                    Flavorcenterpieceplate, delicious ribs bone-in meat, excess chef end. sweet effortlessly pork, low
+                    heat smoker soysauce
+                    flavor meat, rice fruit fruit. Romantic fall-off-the-bone butternut chuck rice burgers.</p>
+                <hr class="kitchen_hr">
+            </div>
+            <div class="juli">
+                <div class="pro">
+                    <div class="pro1">
+                        <img src="./imge/juli1.png" alt="" class="juli_img">
+                    </div>
+                    <div class="pro2">
+                        <h2 class="pro2_h2">Julie Gomez</h2>
+                        <p class="pro2_p">Editor in chief</p>
+                    </div>
+                </div>
+                <p class="juli_p">There are many variations of passages of Lorem Ipsum available, but the majority
+                    have suffered alteration in some form, by injected humour, or randomised words which don't look
+                    even slightly believable. If you are from repetition, injected humour, or non-characteristic
+                    words etc.</p>
+                <div class="juli_icon">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="caments">
+                <h1 class="caments_h1">Comments <p>(25)</p>
+                </h1>
+                <hr>
+                <div class="caments_object"> </div>
+                <div class="caments_btnt">
+                    <button class="caments_btn2">Load 25 more comments</button>
+                </div>
+            </div>
+            <div class="post_cament">
+                <div class="post_top">
+                    <h1 class="post_h1">Write a comment</h1>
+                    <p class="post_p"><span data-switcher data-tab="5">Login</span>to post a comment</p>
+                </div>
+                <div class="post_bottm">
+                    <p class="text_p">@Jelanee Uwaezuoke Synth polaroid bitters chillwave pickled. Vegan disrupt
+                        tousled, Portland keffiyeh aesthetic food truck sriracha cornhole single-origin coffee
+                        church-key roof party. 🔥|</p>
+                    <button class="text_btn">Post comment</button>
+                </div>
+            </div>
+            <div class="you">
+                <h1 class="you_h1">You might also like</h1>
+                <div class="you_object">
+                    <div class="you_top">
+                        <div class="card_you">
+                            <img src="./imge/search10.png" alt="" class="you_img">
+                            <p class="you_p">Cranberry Macaroon Ice Cream Cake</p>
+                        </div>
+                        <div class="card_you">
+                            <img src="./imge/search10.png" alt="" class="you_img">
+                            <p class="you_p">Cranberry Macaroon Ice Cream Cake</p>
+                        </div>
+                        <div class="card_you">
+                            <img src="./imge/search10.png" alt="" class="you_img">
+                            <p class="you_p">Cranberry Macaroon Ice Cream Cake</p>
+                        </div>
+
+                    </div>
+                    <div class="you_top">
+                        <div class="card_you">
+                            <img src="./imge/search10.png" alt="" class="you_img">
+                            <p class="you_p">Cranberry Macaroon Ice Cream Cake</p>
+                        </div>
+                        <div class="card_you">
+                            <img src="./imge/search10.png" alt="" class="you_img">
+                            <p class="you_p">Cranberry Macaroon Ice Cream Cake</p>
+                        </div>
+                        <div class="card_you">
+                            <img src="./imge/search10.png" alt="" class="you_img">
+                            <p class="you_p">Cranberry Macaroon Ice Cream Cake</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="blog_full page" data-page="13">
+            <div class="full">
+                <div class="full_left">
+                    <p class="mighty_p"><img src="./Vector.svg" alt="">85% would make this again</p>
+                    <h1 class="full_h1">Strawberry Cream Cheesecake</h1>
+                    <div class="full_bottom">
+                        <div class="bottom_1">
+                            <img src="./imge/blog4.png" alt="">
+                            <p class="bottom_1p">Tricia Albert</p>
+                        </div>
+                        <div class="bottom_2">
+                            <i class="fa-regular fa-calendar"></i>
+                            <p class="bottom_2p">Yesterday</p>
+                        </div>
+                        <div class="bottom_3">
+                            <i class="fa-regular fa-envelope"></i>
+                            <p class="bottom_3p">25</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="full_right">
+                    <i class="fa-solid fa-share-from-square"></i>
+                    <i class="fa-solid fa-bookmark"></i>
+                </div>
+            </div>
+            <div class="full_one">
+                <hr class="one_hr">
+                <p class="one_p">One thing I learned living in the Canarsie section of Brooklyn, NY was how to cook a
+                    good Italian meal. Here is a recipe I created after having this dish in a restaurant. Enjoy!</p>
+                <img src="./imge/Image (4).png" alt="" class="one_img">
+            </div>
+            <div class="prep">
+                <div class="prep_card">
+                    <p class="prep_p">PREP TIME</p>
+                    <p class="prep_p1">15 MIN</p>
+                </div>
+                <div class="prep_card">
+                    <p class="prep_p">PREP TIME</p>
+                    <p class="prep_p1">15 MIN</p>
+                </div>
+                <div class="prep_card">
+                    <p class="prep_p">SERVINGS</p>
+                    <p class="prep_p1">4 PEOPLE</p>
+                </div>
+                <div class="prep_card1">
+                    <img src="./imge/blog.ssss.svg" alt="">
+                </div>
+            </div>
+
+            <div class="ingredients">
+                <div class="ingredients_left">
+                    <h1 class="ingredients_h1">Ingredients</h1>
+                    <h2 class="ingredients_h2">For the crust</h2>
+                    <div class="chekbox">
+                        <input type="checkbox" class="blog_checbox" />
+                        <p class="chekbox_p">400g graham crackers</p>
+                    </div>
+
+                    <div class="chekbox">
+                        <input type="checkbox" class="blog_checbox" />
+                        <p class="chekbox_p">150g unsalted butters, melted</p>
+                    </div>
+                    <h2 class="ingredients_h2">For the crust</h2>
+                    <div class="chekbox">
+                        <input type="checkbox" class="blog_checbox" />
+                        <p class="chekbox_p">300g marshmallows</p>
+                    </div>
+                    <div class="chekbox">
+                        <input type="checkbox" class="blog_checbox" />
+                        <p class="chekbox_p">175g unsalted butter, melted</p>
+                    </div>
+                    <div class="chekbox">
+                        <input type="checkbox" class="blog_checbox" />
+                        <p class="chekbox_p">500g Philadelphia cream cheese, softened</p>
+                    </div>
+                    <div class="chekbox">
+                        <input type="checkbox" class="blog_checbox" />
+                        <p class="chekbox_p">250ml thickened/whipping cream, warm</p>
+                    </div>
+                    <div class="chekbox">
+                        <input type="checkbox" class="blog_checbox" />
+                        <p class="chekbox_p">3 tbsp powdered gelatin + 3 tbsp water</p>
+                    </div>
+                    <div class="chekbox">
+                        <input type="checkbox" class="blog_checbox" />
+                        <p class="chekbox_p">5 drops purple food gel</p>
+                    </div>
+                    <div class="chekbox">
+                        <input type="checkbox" class="blog_checbox" />
+                        <p class="chekbox_p">3 drops blue food gel</p>
+                    </div>
+
+
+
+                    <div class="nutrition">
+                        <h1 class="nutrition_h1">Nutrition Facts</h1>
+                        <div class="nutrition_bottom">
+                            <p class="nutrition_p">Calories</p>
+                            <p class="nutrition_p1">219.9</p>
+                        </div>
+                        <div class="nutrition_line"></div>
+                        <div class="nutrition_bottom">
+                            <p class="nutrition_p">3 drops blue food gel</p>
+                            <p class="nutrition_p1">10.7 g</p>
+                        </div>
+                        <div class="nutrition_line"></div>
+                        <div class="nutrition_bottom">
+                            <p class="nutrition_p">Saturated Fat</p>
+                            <p class="nutrition_p1">10.7 g</p>
+                        </div>
+                        <div class="nutrition_line"></div>
+                        <div class="nutrition_bottom">
+                            <p class="nutrition_p">Cholesterol</p>
+                            <p class="nutrition_p1">37.4 mg</p>
+                        </div>
+                        <div class="nutrition_line"></div>
+                        <div class="nutrition_bottom">
+                            <p class="nutrition_p">Cholesterol</p>
+                            <p class="nutrition_p1">120.3 mg</p>
+                        </div>
+                        <div class="nutrition_line"></div>
+                        <div class="nutrition_bottom">
+                            <p class="nutrition_p">Potassium</p>
+                            <p class="nutrition_p1">120.3 mg</p>
+                        </div>
+                        <div class="nutrition_line"></div>
+                        <div class="nutrition_bottom">
+                            <p class="nutrition_p">Total Carbohydrate</p>
+                            <p class="nutrition_p1">22.3 g</p>
+                        </div>
+                        <div class="nutrition_line"></div>
+                        <div class="nutrition_bottom">
+                            <p class="nutrition_p">Sugars</p>
+                            <p class="nutrition_p1">8.4 g</p>
+                        </div>
+                        <div class="nutrition_line"></div>
+                        <div class="nutrition_bottom">
+                            <p class="nutrition_p">Protein</p>
+                            <p class="nutrition_p1">7.9 g</p>
+                        </div>
+                        <div class="nutrition_line"></div>
+
+                    </div>
+                </div>
+                <div class="ingredients_right">
+                    <h1 class="ingredients_h1">Ingredients</h1>
+                    <div class="ingredients_bottom">
+                        <div class="raqam">
+                            <p class="raqam_p" id="s888">1</p>
+                        </div>
+                        <div class="ingredients_right_tex">
+                            <p class="ingredients_right_tex_p">To prepare crust add graham crackers to a food processor
+                                and process until you reach fine crumbs. Add melted butter and pulse 3-4 times to coat
+                                crumbs with butter.</p>
+                        </div>
+                    </div>
+                    <div class="ingredients_bottom">
+                        <div class="raqam">
+                            <p class="raqam_p" id="s888">2</p>
+                        </div>
+                        <div class="ingredients_right_tex">
+                            <p class="ingredients_right_tex_p">Pour mixture into a 20cm (8”) tart tin. Use the back of a
+                                spoon to firmly press the mixture out across the bottom and sides of the tart tin. Chill
+                                for 30 min..</p>
+                        </div>
+                    </div>
+                    <div class="ingredients_bottom">
+                        <div class="raqam">
+                            <p class="raqam_p" id="s888">3</p>
+                        </div>
+                        <div class="ingredients_right_tex">
+                            <p class="ingredients_right_tex_p">Begin by adding the marshmallows and melted butter into a
+                                microwave safe bowl. Microwave for 30 seconds and mix to combine. Set aside..</p>
+                        </div>
+                    </div>
+                    <div class="ingredients_bottom">
+                        <div class="raqam">
+                            <p class="raqam_p" id="s888">4</p>
+                        </div>
+                        <div class="ingredients_right_tex">
+                            <p class="ingredients_right_tex_p">Next, add the gelatine and water to a small mixing bowl
+                                and mix to combine. Microwave for 30 seconds.</p>
+                        </div>
+                    </div>
+                    <div class="ingredients_bottom">
+                        <div class="raqam">
+                            <p class="raqam_p" id="s888">5</p>
+                        </div>
+                        <div class="ingredients_right_tex">
+                            <p class="ingredients_right_tex_p">Next, add the gelatine and water to a small mixing bowl
+                                and mix to combine. Microwave for 30 seconds.</p>
+                        </div>
+                    </div>
+                    <div class="ingredients_bottom">
+                        <div class="raqam">
+                            <p class="raqam_p" id="s888">6</p>
+                        </div>
+                        <div class="ingredients_right_tex">
+                            <p class="ingredients_right_tex_p">Add the warm cream and melted gelatin mixture and mix
+                                until well combined.</p>
+                        </div>
+                    </div>
+                    <div class="ingredients_bottom">
+                        <div class="raqam">
+                            <p class="raqam_p" id="s888">7</p>
+                        </div>
+                        <div class="ingredients_right_tex">
+                            <p class="ingredients_right_tex_p">Add 1/3 of the mixture to a mixing bowl, add purple food
+                                gel and mix until well combined. Colour 1/3 of the mixture blue. Split the remaining
+                                mixture into two mixing bowls, colour one pink and leave the other white.</p>
+                        </div>
+                    </div>
+                    <div class="ingredients_bottom">
+                        <div class="raqam">
+                            <p class="raqam_p" id="s888">8</p>
+                        </div>
+                        <div class="ingredients_right_tex">
+                            <p class="ingredients_right_tex_p">Pour half the purple cheesecake mixture into the chill
+                                tart crust. Add half the blue and then add the remaining purple and blue in the tart
+                                tin. Use a spoon to drizzle some pink cheesecake on top. Use a skewer or the end of a
+                                spoon to swirl the pink. Add some small dots of the plain cheesecake mixture to create
+                                stars and then sprinkle some more starts on top before chilling for 2 hours.</p>
+                        </div>
+                    </div>
+                    <div class="ingredients_bottom">
+                        <div class="raqam">
+                            <p class="raqam_p" id="s888">9</p>
+                        </div>
+                        <div class="ingredients_right_tex">
+                            <p class="ingredients_right_tex_p">Slice with a knife to serve.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="already">
+                <h1 class="already_h1">Already made this?</h1>
+                <button class="already_btn">Share your feedback</button>
+                <div class="already_line"></div>
+            </div>
+            <div class="caments">
+                <h1 class="caments_h1">Comments <p>(25)</p>
+                </h1>
+                <hr>
+                <div class="caments_object1">
+
+                </div>
+                <div class="caments_btnt">
+                    <button class="caments_btn1">Load 25 more comments</button>
+                </div>
+            </div>
+            <div class="post_cament">
+                <div class="post_top">
+                    <h1 class="post_h1">Write a comment</h1>
+                    <p class="post_p"><span data-switcher data-tab="5">Login</span>to post a comment</p>
+                </div>
+                <div class="post_bottm">
+                    <p class="text_p">@Jelanee Uwaezuoke Synth polaroid bitters chillwave pickled. Vegan disrupt
+                        tousled, Portland keffiyeh aesthetic food truck sriracha cornhole single-origin coffee
+                        church-key roof party. 🔥|</p>
+                    <button class="text_btn">Post comment</button>
+                </div>
+            </div>
+            <div class="you">
+                <h1 class="you_h1">You might also like</h1>
+                <div class="you_object">
+                    <div class="you_top">
+                        <div class="card_you">
+                            <img src="./imge/search10.png" alt="" class="you_img">
+                            <p class="you_p">Cranberry Macaroon Ice Cream Cake</p>
+                        </div>
+                        <div class="card_you">
+                            <img src="./imge/search10.png" alt="" class="you_img">
+                            <p class="you_p">Cranberry Macaroon Ice Cream Cake</p>
+                        </div>
+                        <div class="card_you">
+                            <img src="./imge/search10.png" alt="" class="you_img">
+                            <p class="you_p">Cranberry Macaroon Ice Cream Cake</p>
+                        </div>
+
+                    </div>
+                    <div class="you_top">
+                        <div class="card_you">
+                            <img src="./imge/search10.png" alt="" class="you_img">
+                            <p class="you_p">Cranberry Macaroon Ice Cream Cake</p>
+                        </div>
+                        <div class="card_you">
+                            <img src="./imge/search10.png" alt="" class="you_img">
+                            <p class="you_p">Cranberry Macaroon Ice Cream Cake</p>
+                        </div>
+                        <div class="card_you">
+                            <img src="./imge/search10.png" alt="" class="you_img">
+                            <p class="you_p">Cranberry Macaroon Ice Cream Cake</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="Deliciousness">
+                <div class="Deliciousness_main">
+                    <h1 class="Deliciousness_h1">Deliciousness to your inbox</h1>
+                    <p class="Deliciousness_p">Enjoy weekly hand picked recipes and recommendations</p>
+                    <form>
+                        <input type="text" placeholder="Email adress " class="Deliciousness_input" id="submit">
+                        <button class="Deliciousness_btn" onclick="xabarbot()" id="sendBtn">Join</button>
+                    </form class="Deliciousness_form">
+                    <p class="Deliciousness_p1">By joining our newsletter you agree to our Terms and Conditions</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="favarites page" data-page="14">
+
+            <div class="favarites_sort">
+                <div class="favarites_sort_left">
+                    <div class="div">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h1 class="div_h1">Favorites</h1>
+
+                </div>
+                <div class="favarites_sort_right">
+                    <select id="catigoriy_sort1">
+                        <option value="All">All</option>
+                        <option value="Keks">Keks</option>
+                        <option value="Chocolate">Chocolate</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="favarites_ob">
+                <hr>
+                <div class="favarites_center">
+                    <p class="favarites_p">(98 Recipes)</p>
+                    <p class="favarites_p">Select</p>
+                    <p class="favarites_p"> <input type="checkbox" id="checkbox1">All</p>
+                    <p class="favarites_p"><i class="fa-solid fa-trash" id="delete1"></i>Delete</p>
+                </div>
+
+
+                <div class="latest_recipes_object1">
+
+                </div>
+                <div class="favarites_btn1">
+                    <button class="favarites_btn3">Load More</button>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="profil page" data-page="15">
+            <div class="profil_nav">
+                <div class="orabtur">
+                    <div class="profil_nav_text">
+                        <h1 class="profil_nav_h1">Profile</h1>
+                    </div>
+                    <div class="profil_nav_btn">
+                        <button class="profil_nav_btn1">SAVE</button>
+                    </div>
+                </div>
+                <hr>
+            </div>
+
+
+
+            <div class="profil_img">
+                <div class="user_img1">
+                    <label for="file-input">
+                     
+                        <img class="fa-solid fa-user" src="" alt="" id="profil_img1" />
+                    </label>
+                </div>
+                <div class="file-upload-container">
+                    <label for="file-upload" class="file-upload-label">
+                        Change Photo
+                    </label>
+                    <input id="file-input" type="file" accept="image/*" class="file-upload-input" />
+                </div>
+                <button class="profil_btn2">Delete Img</button>
+            </div>
+
+            <!-- <div class="profil_img">
+                <div class="user_img1">
+                    <img src="" class="fa-solid fa-user" alt="" id="profil_img1">
+                </div>
+
+                <div class="file-upload-container">
+                    <label for="file-upload" class="file-upload-label">
+                        Change Photo
+                    </label>
+                    <input type="file" id="file-upload" class="file-upload-input" />
+
+                </div>
+            </div> -->
+
+            <div class="name">
+                <div class="name_left">
+                    <div class="input1">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" class="name_left_input" placeholder="Full Name">
+                    </div>
+                    <div class="input1">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" class="name_left_input" placeholder="suzan@gmail.com">
+                    </div>
+                </div>
+                <div class="name_right">
+                    <div class="input1">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" class="name_left_input" placeholder="USERNAME">
+                    </div>
+                    <div class="input1">
+                        <i>@</i>
+                        <input type="password" class="name_left_input" placeholder="PASSWORD">
+                    </div>
+                    <p class="name_right_p">Change </p>
+                </div>
+            </div>
+
+            <div class="accounts">
+                <h1 class="accounts_h1">Connected Accounts</h1>
+                <div class="fasebok_11">
+                    <div class="orabturr1">
+                        <div class="fasebok_11_text">
+                            <h1 class="fasebok_1_h1">facebook</h1>
+                            <p class="fasebok_1_p">Suzan Miller</p>
+                        </div>
+                        <div class="fasebok_11_text">
+                            <h3 class="fasebok_1_p1">Disconnect</h3>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+                <div class="fasebok_11">
+                    <div class="orabturr1">
+                        <div class="fasebok_11_text">
+                            <h1 class="fasebok_1_h1"><span class="span1">G</span><span class="span2">o</span><span
+                                    class="span3">o</span><span class="span4">g</span><span class="span5">l</span><span
+                                    class="span6">e</span></h1>
+                            <p class="fasebok_1_p">Suzan@gmail.com</p>
+                        </div>
+                        <div class="fasebok_11_text">
+                            <h3 class="fasebok_1_p1">Disconnect</h3>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="newsletterr">
+                <div class="newsletter">
+
+                    <div class="newsletter_left">
+                        <h2 class="newsletter_h2">Newsletter</h2>
+                        <p class="newsletter_p">You are currently subscribed to our newsletter</p>
+                    </div>
+                    <div class="newsletter_right">
+                        <button class="newsletter_btn">Unsubscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="sign_outt">
+                <div class="sign_out">
+                    <div class="sign_outich">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <p class="sign_outich_p">Sign out</p>
+                    </div>
+                    <div class="delete_account">
+                        <p class="delete_account_p" id="signOutButton">Delete Account</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="about page" data-page="16">
+            <div class="about_one">
+                <h1 class="about_one_h1">About</h1>
+                <hr>
+            </div>
+
+            <div class="were">
+                <h1 class="were_h1">We’re a group of foodies who love cooking and the internet</h1>
+                <img src="./imge/Image (5).png" alt="" class="were_img">
+                <p class="were_p">Food qualities braise chicken cuts bowl through slices butternut snack. Tender meat
+                    juicy dinners. One-pot low heat plenty of time adobo fat raw soften fruit. sweet renders bone-in
+                    marrow richness kitchen, fricassee basted pork shoulder. Delicious butternut squash hunk.</p>
+            </div>
+
+            <div class="simple">
+                <div class="simple_left">
+                    <h1 class="simple_h1">Simple, Easy Recipes for all</h1>
+                    <p class="simple_p">Juicy meatballs brisket slammin' baked shoulder. Juicy smoker soy sauce burgers
+                        brisket. polenta mustard hunk greens. Wine technique snack skewers chuck excess. Oil heat
+                        slowly. slices natural delicious, set aside magic tbsp skillet, bay leaves brown centerpiece.
+                    </p>
+                </div>
+                <div class="simple_right">
+                    <img src="./imge/Image (6).png" alt="" class="simple_img">
+                </div>
+            </div>
+
+            <div class="about_obj">
+                <h1 class="about_obj_h1">An incredible team of talented chefs and foodies</h1>
+                <div class="about_object">
+
+                </div>
+            </div>
+
+
+            <div class="about_footer">
+                <h1 class="about_footer_h1">Operatring from NYC, Dubai and London</h1>
+                <p class="about_footer_p">Gastronomy atmosphere set aside. Slice butternut cooking home. Delicious
+                    romantic undisturbed raw platter will meld. Thick Skewers skillet natural, smoker soy sauce wait
+                    roux. slices rosette bone-in simmer precision alongside baby leeks. Crafting renders aromatic
+                    enjoyment.</p>
+
+                <div class="about_footer_icon">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="buy page" data-page="17">
+            <h1 class="buy_h1">There are currently no purchases</h1>
+        </div>
+
+
+        <!-- footer page -->
+        <footer>
+            <div class="footer_main">
+                <div class="footer-content">
+                    <img src="./logo.png" alt="" class="imggg">
+                    <p>"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled
+                        and demoralized by the charms of pleasure of the moment"</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <select id="cars">
+                            <option value="Tastebite">Tastebite</option>
+                            <option value="Careers"><a href="#">About us</a></option>
+                            <option value="Careers"><a href="#">Careers</a></option>
+                            <option value="Contact Us"><a href="#">Contact Us</a></option>
+                            <option value="Feedback"><a href="#">Feedback</a></option>
+                        </select>
+                        <h3>Tastebite</h3>
+                        <div class="lainn"></div>
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Feedback</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <select id="cars">
+                            <option value="Legal"><a href="#">Legal</a></option>
+                            <option value="Terms"><a href="#">Terms</a></option>
+                            <option value="Conditions"><a href="#">Conditions</a></option>
+                            <option value="Cookies"><a href="#">Cookies</a></option>
+                            <option value="Copyright"><a href="#">Copyright</a></option>
+                        </select>
+                        <h3>Legal</h3>
+                        <div class="lainn"></div>
+                        <ul>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Conditions</a></li>
+                            <li><a href="#">Cookies</a></li>
+                            <li><a href="#">Copyright</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <select id="cars">
+                            <option value="Follow"><a href="#">Follow</a></option>
+                            <option value="Facebook"><a href="#">Facebook</a></option>
+                            <option value="Twitter"><a href="#">Twitter</a></option>
+                            <option value="Instagram"><a href="#">Instagram</a></option>
+                            <option value="Youtube"><a href="#">Youtube</a></option>
+                        </select>
+                        <h3>Follow</h3>
+                        <div class="lainn"></div>
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Youtube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-bottom">
+                <div class="text">
+                    <p>© 2020 Tastebite - All rights reserved</p>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </footer>
+        <!-- footer page end -->
+    </div>
+    <!-- alert  -->
+    <div class="alort hide">
+        <span class="fa-solid fa-square-check"></span>
+        <span class="msg">Siz Saytga kirdingiz...</span>
+        <span class="close-btn">
+            <span class="fa-solid fa-x"></span>
+        </span>
+    </div>
+    <div class="alort1 hide1">
+        <span class="fa-solid fa-circle-exclamation"></span>
+        <span class="msg1">Iltimos Xatoni To'g'irlang!!!</span>
+        <span class="close-btn1">
+            <span class="fa-solid fa-x" id="x"></span>
+        </span>
+    </div>
+    <script src="./app.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
